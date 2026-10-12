@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ edition_title }}</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: #0d0f14;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #e2e8f0;
+      padding: 32px 16px;
+    }
+    .wrapper { max-width: 680px; margin: 0 auto; }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #1a1f2e 0%, #0f172a 100%);
+      border: 1px solid #2d3748;
+      border-radius: 16px;
+      padding: 40px 36px;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .header .logo {
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #7c8fa8;
+      margin-bottom: 10px;
+    }
+    .header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #60a5fa, #a78bfa, #34d399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .header .date { font-size: 14px; color: #64748b; }
+    .header .tagline { font-size: 15px; color: #94a3b8; margin-top: 8px; }
+
+    /* Intro */
+    .intro-section {
+      background: #131825;
+      border-left: 4px solid #60a5fa;
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin-bottom: 36px;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #cbd5e1;
+    }
+
+    /* Section heading */
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .section-heading .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .dot-ai     { background: #60a5fa; }
+    .dot-crypto { background: #34d399; }
+    .section-heading h2 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+
+    /* News card */
+    .news-card {
+      background: #131825;
+      border: 1px solid #1e293b;
+      border-radius: 14px;
+      padding: 24px 26px;
+      margin-bottom: 18px;
+    }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .rank-badge {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #0d0f14;
+      padding: 3px 9px;
+      border-radius: 6px;
+    }
+    .rank-badge.ai     { background: #60a5fa; }
+    .rank-badge.crypto { background: #34d399; }
+
+    .source-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 5px;
+      color: #94a3b8;
+      background: #1e293b;
+    }
+    .date-tag {
+      margin-left: auto;
+      font-size: 12px;
+      color: #475569;
+    }
+
+    .card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #e2e8f0;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .card-paragraph {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #cbd5e1;
+      margin-bottom: 14px;
+    }
+    .card-preview {
+      font-size: 12px;
+      font-style: italic;
+      color: #475569;
+      border-left: 2px solid #2d3748;
+      padding-left: 10px;
+      margin-bottom: 14px;
+    }
+    .card-link a {
+      font-size: 12px;
+      color: #60a5fa;
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .card-link a:hover { text-decoration: underline; }
+
+    /* Closing */
+    .closing-section {
+      background: linear-gradient(135deg, #131825, #0f172a);
+      border: 1px solid #2d3748;
+      border-radius: 14px;
+      padding: 28px;
+      margin-top: 36px;
+      font-size: 15px;
+      line-height: 1.75;
+      color: #94a3b8;
+      text-align: center;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 32px;
+      padding: 20px;
+      font-size: 12px;
+      color: #334155;
+    }
+    .divider { height: 1px; background: #1e293b; margin: 28px 0; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo">Weekly Intelligence Brief</div>
+    <h1>AI &amp; Crypto Pulse</h1>
+    <div class="tagline">Top stories from the world's leading AI, crypto &amp; blockchain outlets</div>
+    <div class="date">{{ date }}</div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro-section">{{ intro }}</div>
+
+  <!-- NEWS ITEMS -->
+  {% set ns = namespace(prev_topic="") %}
+  {% for item in items %}
+    {% if item.topic != ns.prev_topic %}
+      {% if ns.prev_topic != "" %}<div class="divider"></div>{% endif %}
+      <div class="section-heading">
+        <div class="dot {% if 'AI' in item.topic %}dot-ai{% else %}dot-crypto{% endif %}"></div>
+        <h2>{{ item.topic }}</h2>
+      </div>
+      {% set ns.prev_topic = item.topic %}
+    {% endif %}
+
+    <div class="news-card">
+      <div class="card-meta">
+        <span class="rank-badge {% if 'AI' in item.topic %}ai{% else %}crypto{% endif %}">#{{ item.rank }}</span>
+        <span class="source-tag">{{ item.source }}</span>
+        <span class="date-tag">{{ item.published_at }}</span>
+      </div>
+      <div class="card-title">{{ item.title }}</div>
+      <p class="card-paragraph">{{ item.paragraph }}</p>
+      {% if item.summary_preview %}
+      <p class="card-preview">"{{ item.summary_preview }}"</p>
+      {% endif %}
+      <div class="card-link">
+        <a href="{{ item.url }}" target="_blank">→ Read full article</a>
+      </div>
+    </div>
+  {% endfor %}
+
+  <!-- CLOSING -->
+  <div class="closing-section">{{ closing }}</div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>AI &amp; Crypto Pulse Newsletter &bull; Powered by Claude AI</p>
+    <p style="margin-top:6px;">
+      Sources: CoinDesk &bull; CoinTelegraph &bull; MIT Tech Review &bull; VentureBeat &bull; TechCrunch &amp; more
+    </p>
+    <p style="margin-top:6px;">{{ date }}</p>
+  </div>
+
+</div>
+</body>
+</html>

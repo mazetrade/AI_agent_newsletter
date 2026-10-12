@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI & Crypto Pulse — April 04, 2026</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: #0d0f14;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #e2e8f0;
+      padding: 32px 16px;
+    }
+    .wrapper { max-width: 680px; margin: 0 auto; }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #1a1f2e 0%, #0f172a 100%);
+      border: 1px solid #2d3748;
+      border-radius: 16px;
+      padding: 40px 36px;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .header .logo {
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #7c8fa8;
+      margin-bottom: 10px;
+    }
+    .header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #60a5fa, #a78bfa, #34d399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .header .date { font-size: 14px; color: #64748b; }
+    .header .tagline { font-size: 15px; color: #94a3b8; margin-top: 8px; }
+
+    /* Intro */
+    .intro-section {
+      background: #131825;
+      border-left: 4px solid #60a5fa;
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin-bottom: 36px;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #cbd5e1;
+    }
+
+    /* Section heading */
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .section-heading .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .dot-ai     { background: #60a5fa; }
+    .dot-crypto { background: #34d399; }
+    .section-heading h2 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+
+    /* News card */
+    .news-card {
+      background: #131825;
+      border: 1px solid #1e293b;
+      border-radius: 14px;
+      padding: 24px 26px;
+      margin-bottom: 18px;
+    }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .rank-badge {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #0d0f14;
+      padding: 3px 9px;
+      border-radius: 6px;
+    }
+    .rank-badge.ai     { background: #60a5fa; }
+    .rank-badge.crypto { background: #34d399; }
+
+    .source-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 5px;
+      color: #94a3b8;
+      background: #1e293b;
+    }
+    .date-tag {
+      margin-left: auto;
+      font-size: 12px;
+      color: #475569;
+    }
+
+    .card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #e2e8f0;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .card-paragraph {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #cbd5e1;
+      margin-bottom: 14px;
+    }
+    .card-preview {
+      font-size: 12px;
+      font-style: italic;
+      color: #475569;
+      border-left: 2px solid #2d3748;
+      padding-left: 10px;
+      margin-bottom: 14px;
+    }
+    .card-link a {
+      font-size: 12px;
+      color: #60a5fa;
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .card-link a:hover { text-decoration: underline; }
+
+    /* Closing */
+    .closing-section {
+      background: linear-gradient(135deg, #131825, #0f172a);
+      border: 1px solid #2d3748;
+      border-radius: 14px;
+      padding: 28px;
+      margin-top: 36px;
+      font-size: 15px;
+      line-height: 1.75;
+      color: #94a3b8;
+      text-align: center;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 32px;
+      padding: 20px;
+      font-size: 12px;
+      color: #334155;
+    }
+    .divider { height: 1px; background: #1e293b; margin: 28px 0; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo">Weekly Intelligence Brief</div>
+    <h1>AI &amp; Crypto Pulse</h1>
+    <div class="tagline">Top stories from the world's leading AI, crypto &amp; blockchain outlets</div>
+    <div class="date">Saturday, April 04, 2026</div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro-section">This week in tech and finance, we're witnessing a fascinating divergence in how two transformative sectors are positioning themselves for the future. While artificial intelligence companies are navigating the delicate economics of layered services and competing for investor attention in an increasingly crowded private market, the cryptocurrency world is making bold claims about its role as a hedge against systemic failure. These parallel stories reveal something deeper: both AI and crypto are maturing from hype cycles into infrastructure plays, where the real winners will be determined not by ideology but by sustainable business models and institutional adoption.</div>
+
+  <!-- NEWS ITEMS -->
+  
+  
+    
+      
+      <div class="section-heading">
+        <div class="dot dot-ai"></div>
+        <h2>AI & Machine Learning</h2>
+      </div>
+      
+    
+
+    <div class="news-card">
+      <div class="card-meta">
+        <span class="rank-badge ai">#1</span>
+        <span class="source-tag">TechCrunch AI</span>
+        <span class="date-tag">Apr 04, 2026</span>
+      </div>
+      <div class="card-title">Anthropic says Claude Code subscribers will need to pay extra for OpenClaw usage</div>
+      <p class="card-paragraph">Anthropic is about to test the patience of its Claude Code subscribers with a new pricing structure that will require extra payments for integration with third-party tools like OpenClaw. As Anthony Ha reports for TechCrunch AI, this move represents a strategic decision to monetize what was previously bundled into the core subscription—a common playbook in SaaS, but a potentially risky one for a company still fighting to differentiate itself in a crowded AI market. The decision raises a crucial question: at what point do layered pricing tiers frustrate users more than they generate revenue? For developers already juggling multiple AI tools and integrations, an à la carte approach could push them toward competitors like OpenAI, which may bundle these features more aggressively. This is a critical moment for Anthropic, one of the few AI companies with genuine momentum, to prove that its product ecosystem can sustain premium positioning without driving users away.</p>
+      
+      <p class="card-preview">"It’s about to become more expensive for Claude Code subscribers to use Anthropic’s coding assistant with OpenClaw and ot..."</p>
+      
+      <div class="card-link">
+        <a href="https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/" target="_blank">→ Read full article</a>
+      </div>
+    </div>
+  
+    
+
+    <div class="news-card">
+      <div class="card-meta">
+        <span class="rank-badge ai">#2</span>
+        <span class="source-tag">TechCrunch AI</span>
+        <span class="date-tag">Apr 04, 2026</span>
+      </div>
+      <div class="card-title">Anthropic is having a moment in the private markets; SpaceX could spoil the party</div>
+      <p class="card-paragraph">The private markets are experiencing unprecedented frenzy around Anthropic, with secondary shares trading at valuations that suggest investors see the company as the future of AI, even as OpenAI's mystique fades. Connie Loizos's reporting for TechCrunch AI captures a moment of real momentum for Anthropic, but with a significant caveat: SpaceX's looming IPO could dramatically reshape the private market landscape by pulling capital, attention, and top talent toward Elon Musk's aerospace venture. Glen Anderson, president of Rainmaker Securities, notes that the secondary market for private shares has never been more active, with Anthropic at the center of the action. However, this concentration of enthusiasm in a single company should set off alarm bells for those who remember previous venture cycles—the more hotly a company trades in private markets, the harder it becomes to justify those valuations in public markets. Investors betting on Anthropic's secondary shares would be wise to keep one eye on the IPO calendar.</p>
+      
+      <p class="card-preview">"Glen Anderson, president of Rainmaker Securities, says the secondary market for private shares has never been more activ..."</p>
+      
+      <div class="card-link">
+        <a href="https://techcrunch.com/2026/04/03/anthropic-is-having-a-moment-in-the-private-markets-spacex-could-spoil-the-party/" target="_blank">→ Read full article</a>
+      </div>
+    </div>
+  
+    
+      <div class="divider"></div>
+      <div class="section-heading">
+        <div class="dot dot-crypto"></div>
+        <h2>Crypto & Blockchain</h2>
+      </div>
+      
+    
+
+    <div class="news-card">
+      <div class="card-meta">
+        <span class="rank-badge crypto">#3</span>
+        <span class="source-tag">CoinDesk</span>
+        <span class="date-tag">Apr 04, 2026</span>
+      </div>
+      <div class="card-title">Bitcoin tends to outperform gold and stocks after global shocks, Mercado Bitcoin finds</div>
+      <p class="card-paragraph">In a research finding that will resonate with institutional portfolio managers, Mercado Bitcoin has documented something long suspected by crypto advocates: Bitcoin tends to outperform both gold and traditional equities during periods of global economic shock. This is not merely academic—it's a direct challenge to the centuries-old assumption that gold is the ultimate crisis hedge. The implications are profound for institutional treasurers and central banks considering digital assets as part of their reserves, suggesting that Bitcoin's volatility may be a feature rather than a bug when the broader financial system experiences stress. If this research holds up under scrutiny, it could accelerate the shift toward crypto as a legitimate portfolio diversifier, particularly for institutions in emerging markets or those skeptical of fiat currency stability.</p>
+      
+      <div class="card-link">
+        <a href="https://www.coindesk.com/markets/2026/03/30/bitcoin-tends-to-outperform-gold-and-stocks-after-global-shocks-mercado-bitcoin-finds" target="_blank">→ Read full article</a>
+      </div>
+    </div>
+  
+    
+
+    <div class="news-card">
+      <div class="card-meta">
+        <span class="rank-badge crypto">#4</span>
+        <span class="source-tag">CoinDesk</span>
+        <span class="date-tag">Apr 04, 2026</span>
+      </div>
+      <div class="card-title">Ex-UK Chancellor backs bitcoin as alternative to failing systems</div>
+      <p class="card-paragraph">A former UK Chancellor of the Exchequer has publicly endorsed Bitcoin as a viable alternative to traditional financial systems, signaling that the conversation around cryptocurrency has fundamentally shifted from fringe enthusiasm to mainstream institutional discourse. This type of credibility transfer—when respected establishment figures lend their names to crypto—carries outsized weight in markets and policy circles. The article's assertion that Bitcoin represents an escape route from "failing systems" speaks to a broader anxiety about currency debasement and fiscal instability that transcends political ideology. When politicians of this stature begin publicly questioning the viability of traditional monetary systems, it creates political space for regulations that might actually favor crypto rather than stifle it, a scenario that seemed unthinkable just a few years ago.</p>
+      
+      <div class="card-link">
+        <a href="https://www.coindesk.com/markets/2026/04/03/ex-uk-chancellor-backs-bitcoin-as-alternative-to-failing-systems" target="_blank">→ Read full article</a>
+      </div>
+    </div>
+  
+    
+
+    <div class="news-card">
+      <div class="card-meta">
+        <span class="rank-badge crypto">#5</span>
+        <span class="source-tag">CoinDesk</span>
+        <span class="date-tag">Apr 04, 2026</span>
+      </div>
+      <div class="card-title">Digital asset treasuries must now earn their keep</div>
+      <p class="card-paragraph">The notion that digital asset treasuries must "earn their keep" signals a maturation moment in crypto: the days of holding Bitcoin simply as a hedge are over, and institutions now expect yield and productive returns from their crypto holdings. Sean Kiernan's opinion piece for CoinDesk articulates a shift from the "hold and pray" mentality that dominated crypto investment for years toward something closer to traditional treasury management, where every asset must justify its place in a portfolio. This creates immediate pressure on the crypto ecosystem to develop more sophisticated yield generation mechanisms—whether through staking, DeFi protocols, or institutional lending arrangements—that can compete with traditional fixed-income instruments. The winners in this environment will be those platforms and protocols that can deliver reliable, transparent, and regulatory-compliant returns without sacrificing the security benefits that made crypto attractive in the first place.</p>
+      
+      <div class="card-link">
+        <a href="https://www.coindesk.com/opinion/2026/04/04/digital-asset-treasuries-must-now-earn-their-keep" target="_blank">→ Read full article</a>
+      </div>
+    </div>
+  
+
+  <!-- CLOSING -->
+  <div class="closing-section">This week's developments paint a picture of two industries at an inflection point: AI companies are learning that growth and profitability don't always align, while crypto is transitioning from a speculative asset class to an institutional treasury tool. The next few months will reveal whether these sectors can execute this maturation without losing the innovation and momentum that defined them.</div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>AI &amp; Crypto Pulse Newsletter &bull; Powered by Claude AI</p>
+    <p style="margin-top:6px;">
+      Sources: CoinDesk &bull; CoinTelegraph &bull; MIT Tech Review &bull; VentureBeat &bull; TechCrunch &amp; more
+    </p>
+    <p style="margin-top:6px;">Saturday, April 04, 2026</p>
+  </div>
+
+</div>
+</body>
+</html>
